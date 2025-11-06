@@ -42,15 +42,15 @@ const handleResize = () => {
 
 const testApiConnection = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/test');
-    const data = await res.json();
+    const res = await fetch('http://localhost:3000/api/test')
+    const data = await res.json()
     if (res.ok) {
-      console.log('Backend test successful:', data);
+      console.log('Backend test successful:', data)
     } else {
-      console.error('Backend test failed:', data);
+      console.error('Backend test failed:', data)
     }
   } catch (err) {
-    console.error('Backend test error:', err);
+    console.error('Backend test error:', err)
   }
 }
 
