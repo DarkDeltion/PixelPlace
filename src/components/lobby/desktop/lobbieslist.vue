@@ -10,7 +10,7 @@
     </div>
     <div class="lobby-item">
       <span>Lobby #3 <span class="lobby-lock">🔒</span></span>
-      <button class="lobby-join-btn">Join</button>
+      <button class="mobile-lobby-lock-btn">Join</button>
     </div>
   </div>
 </template>
@@ -60,5 +60,19 @@
   font-size: 1.3rem;
   margin-left: 0.5rem;
   margin-right: auto;
+}
+
+.mobile-lobby-lock-btn {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 1.2rem;
+  padding: 0.3rem 1rem;
+  border-radius: 8px;
+  border: 2px solid #222;
+  background: #b3b3b3;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  cursor: not-allowed;
 }
 </style>

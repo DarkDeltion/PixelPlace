@@ -1,11 +1,33 @@
 <template>
   <div class="canvas-container">
-    <canvas id="mobileCanvas"></canvas>
+    <vue-drawing-canvas
+      ref="canvasRef"
+      v-model:image="image"
+      canvasId="mainCanvas"
+      :width="800"
+      :height="800"
+      :stroke-type="strokeType"
+      :line-cap="lineCap"
+      :line-join="lineJoin"
+      :fill-shape="fillShape"
+      :eraser="eraser"
+      :lineWidth="line"
+      :color="color"
+      :background-color="backgroundColor"
+      :background-image="backgroundImage"
+      :watermark="watermark"
+      :initial-image="initialImage"
+      saveAs="png"
+      :styles="{ border: 'solid 1px #000' }"
+      :lock="disabled"
+      @mousemove="onMouseMove"
+      :additional-images="additionalImages"
+    />
   </div>
 </template>
 
 <script setup>
-// placeholder: canvas drawing logic can be added or shared with the desktop canvas
+import VueDrawingCanvas from 'vue-drawing-canvas'
 </script>
 
 <style scoped>

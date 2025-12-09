@@ -5,19 +5,19 @@
         <div class="mobile-lobby-info">
           <span>Lobby #1</span>
         </div>
-        <button class="mobile-lobby-join-btn">Join</button>
+        <router-link :to="`/canvas`" class="mobile-lobby-join-btn">Join</router-link>
       </div>
       <div class="mobile-lobby-item">
         <div class="mobile-lobby-info">
           <span>Lobby #2</span>
         </div>
-        <button class="mobile-lobby-join-btn">Join</button>
+        <router-link :to="`/canvas`" class="mobile-lobby-join-btn">Join</router-link>
       </div>
       <div class="mobile-lobby-item">
         <div class="mobile-lobby-info">
           <span>Lobby #3 <span class="mobile-lobby-lock">🔒</span></span>
         </div>
-        <button class="mobile-lobby-join-btn">Join</button>
+        <button class="mobile-lobby-lock-btn">Join</button>
       </div>
     </div>
   </div>
@@ -75,6 +75,7 @@
   color: #222;
   cursor: pointer;
   transition: background 0.2s;
+  text-decoration: none;
 }
 .mobile-lobby-join-btn:hover {
   background: #d3d3d3;
@@ -84,5 +85,19 @@
   font-size: 1.2rem;
   margin-left: 0.5rem;
   margin-right: auto;
+}
+
+.mobile-lobby-lock-btn {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 1.2rem;
+  padding: 0.3rem 1rem;
+  border-radius: 8px;
+  border: 2px solid #222;
+  background: #b3b3b3;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  cursor: not-allowed;
 }
 </style>
